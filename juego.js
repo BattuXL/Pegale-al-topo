@@ -1,9 +1,5 @@
 
-// Funcion que carga primero todo el DOM antes de ejecutar el juego
-
 document.addEventListener("DOMContentLoaded", function() {
-
-    // Se captura cada topo por su clase unica y tambien su clase general y se crea una variable que contendra el numero de topo que aparecera
     const topos = document.querySelectorAll(".topo");
     const to1 = document.querySelector(".to1");
     const to2 = document.querySelector(".to2");
@@ -15,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const to8 = document.querySelector(".to8");
     const to9 = document.querySelector(".to9");
     const to10 = document.querySelector(".to10");
+    const contador = document.querySelector(".puntos")
     let num = 0;
+    let cont = 0;
+    let velocidad = 4000;
 
-
-    // Funcion para ocultar todos los topos
-    function hideAllTopos() {
+    function esconder() {
         to1.style.display = "none";
         to2.style.display = "none";
         to3.style.display = "none";
@@ -32,12 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
         to10.style.display = "none";
     }
 
-    // Se crea un setIntervall para que cada cierto tiempo establecido aparezca un nuevo topo y se oculte el anterior en caso de no clickearlo
-
-    setInterval(function() {
-        hideAllTopos();  
+    function mostrar() {
+        esconder();  
         num = Math.floor(Math.random() * 10) + 1;
-
+        
         if (num == 1) {
             to1.style.display = "flex";
         } else if (num == 2) {
@@ -59,14 +54,25 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (num == 10) {
             to10.style.display = "flex";
         }
-    }, 4000);
 
+        setTimeout(mostrar, velocidad);
+    }
 
-    // Se crea un evento para que cuando se haga click en un topo se oculte sumando un punto
     topos.forEach(topo => {
         topo.addEventListener("mousedown", function() {
-            hideAllTopos();
+            esconder();
+            aumentar();
+            contador.textContent = `Puntaje: ${++cont}`;
         });
     });
 
+    function aumentar() {
+        velocidad -= 500;
+        if (velocidad < 1000) {
+            velocidad = 1000;
+        }
+        console.log(velocidad);
+    }
+
+    mostrar();
 });

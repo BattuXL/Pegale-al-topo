@@ -9,6 +9,7 @@ body{
     height: 100vh;
     display: flex;
     flex-flow: column wrap;
+    cursor: url(img/martillo.png),auto;
 }
 
 
@@ -35,6 +36,7 @@ body{
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .fila1{
@@ -73,9 +75,9 @@ body{
 
 .topo{
     display: none;
-    display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 img{

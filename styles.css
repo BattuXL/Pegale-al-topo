@@ -19,6 +19,11 @@ body{
 }
 
 
+body>div{
+    user-select: none;
+}
+
+
 .titulo{
     width: 50%;
     height: 20%;
@@ -37,7 +42,7 @@ body{
     justify-content: space-evenly;
 }
 
-.menu>div{
+.menu>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,8 +60,8 @@ body{
     gap: 20px;
 }
 
-
-.boton{
+.botones>div,a{
+    width: 70%;    
     width: 70%;
     height: auto;
     font-size: 40px;
@@ -69,10 +74,59 @@ body{
     opacity: 70%;
 }
 
-.boton:hover{
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+.instrucciones{
+    padding: 5%;
+    width: 50%;
+    height: 50%;
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    background-color: black;
+    opacity: 80%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.texto{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10%;
+}
+
+.botoncerrar{
+    width: 70%;    
+    width: 70%;
+    height: auto;
+    font-size: 40px;
+    background-color: greenyellow;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 70%;
+}
+
+.botoncerrar:hover{
     animation: seleccionar 1s forwards;
 }
 
+.botones>a:hover{
+    animation: seleccionar 1s forwards;
+}
+
+.botones>div:hover{
+    animation: seleccionar 1s forwards;
+}
 
 @keyframes seleccionar {
     0%{
@@ -95,3 +149,71 @@ body{
     }
 }
 
+
+@keyframes presionar {
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    75%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+@keyframes fondo {
+    0%{
+        background-image: url(imagenes/fondo.png);
+    }
+
+    100%{
+        background-image: url(img/cesped2.png);
+    }
+}
+
+@keyframes fondoevil {
+    0%{
+        background-image: url(img/cesped2.png);
+    }
+    
+    100%{
+        background-image: url(imagenes/fondo.png);
+    }
+}
+
+
+
+@keyframes des_menu {
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+        display: none;
+    }
+    
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 80%;
+    }
+    
+}

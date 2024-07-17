@@ -9,7 +9,7 @@ body{
     height: 100vh;
     display: flex;
     flex-flow: column wrap;
-    cursor: url(img/martillo.png),auto;
+    cursor: url(img/martillo.png) 0 70,auto;
 }
 
 
@@ -30,9 +30,14 @@ body{
 .datos{
     width: 10%;
     height: 100%;
-    background-color: #000;
-    color: #fff;
+    background: url(img/pegar\ topo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(22, 11, 0);
     display: flex;
+    color: ghostwhite;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;

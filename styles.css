@@ -60,7 +60,7 @@ body>div{
     gap: 20px;
 }
 
-.botones>div,a{
+.botones>div{
     width: 70%;    
     width: 70%;
     height: auto;
@@ -73,13 +73,6 @@ body>div{
     align-items: center;
     opacity: 70%;
 }
-
-a{
-    text-decoration: none;
-    color: black;
-
-}
-
 
 .instrucciones{
     padding: 5%;
@@ -117,38 +110,37 @@ a{
 }
 
 .botoncerrar:hover{
-    animation: seleccionar 1s forwards;
+    animation: seleccionar 1s forwards, presionar 1s infinite;
+}
+.boton1:hover{
+    animation: seleccionar 1s forwards, presionar 1s infinite;
+}
+.boton2:hover{
+    animation: seleccionar 1s forwards, presionar 1s infinite;
+}
+.boton3:hover{
+    animation: seleccionar 1s forwards, presionar 1s infinite;
 }
 
-.botones>a:hover{
-    animation: seleccionar 1s forwards;
-}
 
-.botones>div:hover{
-    animation: seleccionar 1s forwards;
-}
 
 @keyframes seleccionar {
     0%{
-        width: 80%;
+        width: 70%;
     }
     25%{
-        width: 80%;
+        width: 70%;
     }
     50%{
-        opacity: 100%;
         width: 100%;
     }
     75%{
-        opacity: 100%;
         width: 100%;
     }
     100%{
-        opacity: 100%;
         width: 100%;
     }
 }
-
 
 @keyframes presionar {
     0%{
@@ -168,6 +160,15 @@ a{
     }
 }
 
+@keyframes detener {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
+}
 
 @keyframes fondo {
     0%{
@@ -190,7 +191,6 @@ a{
 }
 
 
-
 @keyframes des_menu {
     0%{
         opacity: 100%;
@@ -201,8 +201,20 @@ a{
     100%{
         opacity: 0%;
         display: none;
+    }  
+}
+
+@keyframes des_menu {
+    0%{
+        opacity: 70%;
     }
-    
+    50%{
+        opacity: 70%;
+    }
+    100%{
+        opacity: 0%;
+        display: none;
+    }
 }
 
 @keyframes aparecer {

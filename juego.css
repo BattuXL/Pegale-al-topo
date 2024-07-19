@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Pixelify Sans", sans-serif
 }
 
 body{
@@ -10,8 +11,52 @@ body{
     display: flex;
     flex-flow: column wrap;
     cursor: url(img/martillo.png) 0 70,auto;
+    overflow: hidden;
 }
 
+.mensaje{
+    display: none;
+    cursor: auto;
+}
+
+.personaje{
+    position: absolute;
+    width: 40%;
+    top: 4%;
+    right: 30.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personaje img{
+    width: 20%;
+}
+
+.fin{
+    position: absolute; 
+    background-image: url(img/tierra.jpg);
+    background-size: contain;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    top: 20%;
+    right:35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    color: ghostwhite;
+    font-size: 20px;
+}
+
+.reiniciar{
+    font-size: 20px;
+    color: ghostwhite;
+    background-image: url(img/piedra.jpg);
+    background-size: contain;
+    cursor: pointer;
+}
 
 .cielo{
     width: 90%;
@@ -30,18 +75,18 @@ body{
 .datos{
     width: 10%;
     height: 100%;
-    background: url(img/pegar\ topo.png);
+    background: url(img/tierra.jpg);
     background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgb(22, 11, 0);
     display: flex;
     color: ghostwhite;
-    font-size: 15px;
+    font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     user-select: none;
+    gap: 50px;
+    cursor:auto;
 }
 
 .fila1{
@@ -88,4 +133,44 @@ body{
 img{
     width: 80%;
     height: auto;
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.control *{
+    flex-basis: 50%;
+    background-image: url(img/piedra.jpg);
+    background-size: contain;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.texto{
+    font-size: 30px;
+}
+
+.musica{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    height: 50px; 
+    cursor: pointer;
+}
+
+.puntaje,.vidas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

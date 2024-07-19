@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golpea al topo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="juego.css">
+    <link rel="icon" href="img/pegar topo.png">
     <script src="juego.js"></script>
 </head>
 <body>
+   <div class="mensaje">
+        <div class="personaje"><img src="img/topo3.png"></div>
+        <div class="fin">
+            <p>HA TERMINADO EL JUEGO</p>
+            <p class="resultado"></p>
+            <button class="reiniciar">Volver a jugar</button>
+        </div>
+   </div>
    <div class="cielo"></div>
    <div class="suelo">
         <div class="fila1">
@@ -79,9 +92,20 @@
         </div>
    </div>
    <div class="datos">
-        <div class="puntos">Puntos: 0</div>
-        <div class="vidas">Vidas: 3</div>
+        <div class="logo">
+            <img src="img/pegar topo.png" alt="">
+        </div>
+        <div>
+            <div class="puntos">Puntos: 0</div>
+            <div class="vidas">Vidas: 3</div>
+        </div>
+        <div class="control">
+            <div class="texto">Musica</div>
+            <div class="musica"><i class="fa-solid fa-play"></i></div>
+        </div>
+        
    </div>
 </body>
 </html>
+
 

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let cont = 0;
 
     //La variable vid sirve para llevar el conteo de las vidas
-    let vid = 4;
+    let vid = 3;
 
     //La variable velocidad sirve para la velocidad de aparicion de los topos
     let velocidad = 4500;
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
             //Se resta una vida
             vid--;
             vidas.textContent = `Vidas: ${vid}`;
-            if (vid === 0) {
+            if (vid == 0) {
                 //Se detiene el juego y se muestra el resultado
                 mensaje.style.display = "block";
                 resultado.innerHTML = `PUNTUACIÓN: ${cont}`;
@@ -152,11 +152,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    //Funcion para aumentar la velocidad de aparicion de los topos entre mas topos se hayan golpeado, teniendo un limite de 1000
+    //Funcion para aumentar la velocidad de aparicion de los topos entre mas topos se hayan golpeado, teniendo un limite de 700
     function aumentar() {
-        velocidad -= 500;
-        if (velocidad <= 900) {
-            velocidad = 900;
+        velocidad -= 350;
+        if (velocidad <= 880) {
+            velocidad = 880;
         }
     }
 

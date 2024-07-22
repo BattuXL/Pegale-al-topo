@@ -23,7 +23,9 @@ body{
     position: absolute;
     width: 40%;
     top: 4%;
-    right: 30.2%;
+    margin: auto;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,20 +36,23 @@ body{
 }
 
 .fin{
-    position: absolute; 
-    background-image: url(img/tierra.jpg);
-    background-size: contain;
-    width: 400px;
-    height: 100px;
-    border-radius: 10px;
-    top: 20%;
-    right:35%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
+    position: absolute; 
+    background-image: url(img/tierra.jpg);
+    background-size: contain;
+    border-radius: 10px;
+    width: 40%;
+    top: 20%;
+    margin: auto;
+    padding: 5px;
+    left: 0;
+    right: 0;
     color: ghostwhite;
     font-size: 20px;
+    gap:2px;
 }
 
 .reiniciar{

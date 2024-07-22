@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const boton2 = document.getElementById("boton2");
     const boton3 = document.getElementById("boton3");
     const icon = document.getElementById("icon");
+    const boton4 = document.getElementById("boton4");
     const animacionepica= document.getElementById("body");
     const instrucciones = document.getElementById("instrucciones");
 
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let click1= 0;
     let click2= 0;
     let click3= 0;
+    let click4= 0;
 
 
     //se definen las variables para los sonidos
@@ -87,4 +89,27 @@ document.addEventListener("DOMContentLoaded", function() {
                     }, 1000);
             }
         });
+    boton4.addEventListener("mousedown", function() {
+
+            if (click4 == 0) {
+                click4 = 1;
+                boton4.style.animation = "";
+            }else{
+                click4 = 0;
+                boton4.style.animation = "detener 1s forwards";
+
+                setTimeout(() => {
+                    boton4.style.animation = ""; 
+                }, 1000);
+
+                body.style.animation = "fondoevil 3s forwards";
+                
+                instrucciones.style.animation = "des_menu 3s forwards 2s";
+
+                setTimeout(() => {
+                    animacionepica.children[0].style.animation = "aparecer_2 4s forwards";
+                    animacionepica.children[1].style.animation = "aparecer_2 4s forwards";
+                }, 5000);
+        }
+    });    
 });

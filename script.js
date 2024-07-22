@@ -18,9 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let click3= 0;
     let click4= 0;
 
-
-    //se definen las variables para los sonidos
-    const menu = new Audio("audio/menu.mp3");
+    //se define una variable para la musica de fondo
+    let menu = new Audio("audio/menu.mp3");
 
     //eventos para las animaciones de los botones
 
@@ -31,10 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }else{
             click1 = 0;
             boton1.style.animation = "detener 1s forwards";
-
-            inicio.volume = 1;
-            inicio.play();
-
                 setTimeout(() => {
                 boton1.style.animation = ""; 
                 }, 1000);
@@ -46,14 +41,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     boton2.addEventListener("click", function() {
-        
         if (click2 == 0) {
             click2 = 1;
-
             boton2.style.animation = "";
         }else{
             click2 = 0;
-
             boton2.style.animation = "detener 1s forwards";
                 setTimeout(() => {
                 boton2.style.animation = ""; 
@@ -68,29 +60,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     instrucciones.style.animation = "aparecer 4s forwards";
                     instrucciones.style.display = "flex";
                 }, 5000);    
-            }
+        }
+
         });
 
     boton3.addEventListener("click", function() {
             if (click3 == 0) {
                 click3 = 1;
-                icon.src = "imagenes/musica2.svg";
                 menu.pause();
+                icon.src = "imagenes/musica2.svg";
                 boton3.style.animation = "";
             }else{
                 click3 = 0;
                 icon.src = "imagenes/music1.svg";
                 menu.volume = 0.2;
                 menu.play();
-
                 boton3.style.animation = "detener 1s forwards";
                     setTimeout(() => {
                     boton3.style.animation = ""; 
                     }, 1000);
             }
         });
-    boton4.addEventListener("mousedown", function() {
 
+    boton4.addEventListener("mousedown", function() {
             if (click4 == 0) {
                 click4 = 1;
                 boton4.style.animation = "";
@@ -110,6 +102,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     animacionepica.children[0].style.animation = "aparecer_2 4s forwards";
                     animacionepica.children[1].style.animation = "aparecer_2 4s forwards";
                 }, 5000);
-        }
-    });    
+            }
+        });    
 });

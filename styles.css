@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 *{
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
 }
-
 
 body{
     width: 100%;
@@ -18,11 +17,9 @@ body{
     flex-flow: column;
 }
 
-
 body>div{
     user-select: none;
 }
-
 
 .titulo{
     width: 50%;
@@ -60,35 +57,31 @@ body>div{
     gap: 20px;
 }
 
-
-.botones>div{    
-    font-size: 40px;
+.botones>div{
     background-color: greenyellow;
+    opacity: 70%;
+    font-size: 40px;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 70%;
 }
 
-.boton1{
+.boton1 , .boton2{
     width: 70%;
     height: auto;
 }
-.boton2{
-    width: 70%;
-    height: auto;
-}
+
 .boton3{
     width: 30%;
     height: auto;
 }
 
 .boton3>img{
-    width: 50%;
+    width: 40%;
+    height: auto;
 }
-
 
 .instrucciones{
     width: 60%;
@@ -134,7 +127,6 @@ body>div{
     animation: seleccionar_3 1s forwards, presionar 1s infinite;
 }
 
-
 @keyframes seleccionar {
     0%{
         width: 70%;
@@ -176,7 +168,6 @@ body>div{
         width: 35%;
     }
 }
-
 
 @keyframes presionar {
     0%{
@@ -225,8 +216,6 @@ body>div{
         background-image: url(imagenes/fondo.png);
     }
 }
-
-
 
 @keyframes des_menu {
     0%{

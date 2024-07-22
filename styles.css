@@ -60,10 +60,8 @@ body>div{
     gap: 20px;
 }
 
-.botones>div{
-    width: 70%;    
-    width: 70%;
-    height: auto;
+
+.botones>div{    
     font-size: 40px;
     background-color: greenyellow;
     border-radius: 5px;
@@ -74,30 +72,44 @@ body>div{
     opacity: 70%;
 }
 
-.instrucciones{
-    padding: 5%;
+.boton1{
+    width: 70%;
+    height: auto;
+}
+.boton2{
+    width: 70%;
+    height: auto;
+}
+.boton3{
+    width: 30%;
+    height: auto;
+}
+
+.boton3>img{
     width: 50%;
-    height: 50%;
+}
+
+
+.instrucciones{
+    width: 60%;
+    height: 70%;
+    opacity: 90%;
     color: white;
     font-size: 20px;
     text-align: justify;
     background-color: black;
-    opacity: 80%;
     display: none;
     justify-content: center;
     align-items: center;
     flex-flow: column;
 }
 
-.texto{
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10%;
+.instrucciones>img{
+    opacity: 100%;
 }
 
-.botoncerrar{
-    width: 70%;    
-    width: 70%;
+.botoncerrar{    
+    width: 50%;
     height: auto;
     font-size: 40px;
     background-color: greenyellow;
@@ -110,7 +122,7 @@ body>div{
 }
 
 .botoncerrar:hover{
-    animation: seleccionar 1s forwards, presionar 1s infinite;
+    animation: seleccionar_2 1s forwards, presionar 1s infinite;
 }
 .boton1:hover{
     animation: seleccionar 1s forwards, presionar 1s infinite;
@@ -119,9 +131,8 @@ body>div{
     animation: seleccionar 1s forwards, presionar 1s infinite;
 }
 .boton3:hover{
-    animation: seleccionar 1s forwards, presionar 1s infinite;
+    animation: seleccionar_3 1s forwards, presionar 1s infinite;
 }
-
 
 
 @keyframes seleccionar {
@@ -141,6 +152,31 @@ body>div{
         width: 100%;
     }
 }
+
+@keyframes seleccionar_2 {
+    0%{
+        width: 50%;
+    }
+    50%{
+        width: 70%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes seleccionar_3 {
+    0%{
+        width: 30%;
+    }
+    50%{
+        width: 35%;
+    }
+    100%{
+        width: 35%;
+    }
+}
+
 
 @keyframes presionar {
     0%{
@@ -191,22 +227,10 @@ body>div{
 }
 
 
-@keyframes des_menu {
-    0%{
-        opacity: 100%;
-    }
-    50%{
-        opacity: 100%;
-    }
-    100%{
-        opacity: 0%;
-        display: none;
-    }  
-}
 
 @keyframes des_menu {
     0%{
-        opacity: 70%;
+        opacity: 100%;
     }
     50%{
         opacity: 70%;
@@ -225,7 +249,18 @@ body>div{
         opacity: 0%;
     }
     100%{
-        opacity: 80%;
+        opacity: 90%;
     }
-    
+}
+
+@keyframes aparecer_2 {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
